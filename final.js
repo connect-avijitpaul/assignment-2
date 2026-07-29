@@ -1,5 +1,4 @@
-// Problem 1 — Match Winner
-
+//Problem-01: Match Winner
 function matchWinner(teamAGoals, teamBGoals) {
   if (typeof teamAGoals !== 'number' || typeof teamBGoals !== 'number') {
     return 'Invalid';
@@ -13,8 +12,7 @@ function matchWinner(teamAGoals, teamBGoals) {
   return 'Draw';
 }
 
-// Problem 2 — Elevator Weight Safety Checker
-
+//Problem-02: Elevator Weight Safety Checker
 function isElevatorSafe(weights) {
   if (!Array.isArray(weights)) {
     return 'Invalid';
@@ -30,8 +28,7 @@ function isElevatorSafe(weights) {
   }
 }
 
-// Problem 3 — AI Token Cost Calculator
-
+//Problem-03: AI Token Cost Calculator
 function calculateAiCost(tokensUsed) {
   if (typeof tokensUsed !== 'number' || tokensUsed < 0) {
     return 'Invalid';
@@ -44,3 +41,19 @@ function calculateAiCost(tokensUsed) {
   let totalCost = tokenBlocks * 5;
   return totalCost;
 }
+
+//Problem-04: Top Rated Restaurant Finder
+function topRatedRestaurant(restaurants) {
+  if (!Array.isArray(restaurants) || restaurants.length === 0) {
+    return 'Invalid';
+  }
+  let best = restaurants[0];
+  for (let data of restaurants) {
+    if (data.rating > best.rating) {
+      best = data;
+    }
+  }
+  return best.name.toUpperCase();
+}
+
+//Problem-05: Debugging Challenge - API Response Time Monitor

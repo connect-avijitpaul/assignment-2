@@ -7,8 +7,9 @@ function matchWinner(teamAGoals, teamBGoals) {
   }
   if (teamBGoals > teamAGoals) {
     return 'Team B Won';
+  } else {
+    return 'Draw';
   }
-  return 'Draw';
 }
 console.log(matchWinner(2, 1));
 console.log(matchWinner(1, 3));

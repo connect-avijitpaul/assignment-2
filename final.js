@@ -29,3 +29,18 @@ function isElevatorSafe(weights) {
     return false;
   }
 }
+
+// Problem 3 — AI Token Cost Calculator
+
+function calculateAiCost(tokensUsed) {
+  if (typeof tokensUsed !== 'number' || tokensUsed < 0) {
+    return 'Invalid';
+  }
+  let remainingTokens = tokensUsed - 500;
+  if (remainingTokens <= 0) {
+    return 0;
+  }
+  let tokenBlocks = Math.floor(remainingTokens / 100);
+  let totalCost = tokenBlocks * 5;
+  return totalCost;
+}

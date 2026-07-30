@@ -8,8 +8,9 @@ function matchWinner(teamAGoals, teamBGoals) {
   }
   if (teamBGoals > teamAGoals) {
     return 'Team B Won';
+  } else {
+    return 'Draw';
   }
-  return 'Draw';
 }
 
 //Problem-02: Elevator Weight Safety Checker
@@ -57,3 +58,21 @@ function topRatedRestaurant(restaurants) {
 }
 
 //Problem-05: Debugging Challenge - API Response Time Monitor
+function averageResponseTime(times) {
+  if (Array.isArray(times) === false) {
+    return 'Invalid';
+  }
+  if (times.length === 0) {
+    return 'Invalid';
+  }
+  for (let i = 0; i < times.length; i++) {
+    if (typeof times[i] !== 'number') {
+      return 'Invalid';
+    }
+  }
+  let total = 0;
+  for (let i = 0; i < times.length; i++) {
+    total = total + times[i];
+  }
+  return total / times.length;
+}
